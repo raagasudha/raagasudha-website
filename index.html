@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raaga Sudha Fine Arts Academy — Unearth Your Inner Singer</title>
+<meta name="description" content="Hindustani, Carnatic, Bollywood and light music vocal training in Singapore — AI-powered custom sessions, special needs coaching, devotional training for seniors, and certification guidance. Online and in-person, all ages welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  /* ============================================================
+     RAAGA SUDHA — DESIGN TOKENS (aligned to existing brand flyer)
+     Ink:      #0F2E2E  (deep teal-black)
+     Paper:    #FBF9F3  (soft ivory)
+     Teal:     #0E7C86  (brand teal, primary accent)
+     Gold:     #C9A227  (brand gold, secondary accent)
+     Hairline: #D9CFC0
+     ============================================================ */
+
+  :root{
+    --ink:#0F2E2E;
+    --paper:#FBF9F3;
+    --paper-2:#F1ECDD;
+    --teal:#0E7C86;
+    --teal-deep:#0A5C63;
+    --gold:#C9A227;
+    --gold-light:#E0C468;
+    --line:#D9CFC0;
+    --display: 'Fraunces', serif;
+    --body: 'Work Sans', sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:600;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    color:var(--teal-deep);
+  }
+
+  .eyebrow{
+    font-family:var(--body);
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:0.72rem;
+    font-weight:600;
+    color:var(--gold);
+  }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  .bg-weave{
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(14,124,134,0.06) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,249,243,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px;
+    max-width:1080px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    text-decoration:none;
+  }
+  .brand svg{width:36px; height:36px; flex-shrink:0;}
+  .brand-text{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.15rem;
+    color:var(--teal-deep);
+    letter-spacing:0.01em;
+  }
+  .brand-text span{
+    display:block;
+    font-family:var(--body);
+    font-size:0.62rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin-top:1px;
+  }
+  nav.links{display:flex; gap:32px; align-items:center;}
+  nav.links a{
+    text-decoration:none;
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--ink);
+    position:relative;
+    padding:4px 0;
+  }
+  nav.links a::after{
+    content:"";
+    position:absolute; left:0; bottom:-2px;
+    width:0; height:1.5px;
+    background:var(--teal);
+    transition:width 0.25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--teal);
+    color:var(--paper) !important;
+    padding:9px 20px;
+    border-radius:2px;
+    font-weight:600 !important;
+    font-size:0.85rem !important;
+  }
+  .nav-cta::after{display:none;}
+  .nav-cta:hover{background:var(--teal-deep);}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-toggle span{display:block; width:24px; height:2px; background:var(--ink); margin:5px 0;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:88px 28px 70px;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 60% 55% at 78% 15%, rgba(201,162,39,0.14) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 10% 90%, rgba(14,124,134,0.10) 0%, transparent 70%);
+  }
+  .logo-mark{
+    width:100%; height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .nav-logo{width:38px; height:38px;}
+  .footer-logo{width:30px; height:30px; opacity:0.92;}
+  .hero-flourish{
+    display:flex; align-items:center; gap:14px;
+    margin:6px 0 26px;
+    color:var(--gold);
+  }
+  .hero-flourish svg{width:120px; height:16px; flex-shrink:0;}
+  .hero-flourish span{
+    font-family:var(--display); font-style:italic; font-size:0.92rem;
+    color:var(--teal-deep); white-space:nowrap;
+  }
+  .sparkle{
+    position:absolute;
+    opacity:0.8;
+  }
+  .sparkle-1{top:14%; right:6%; width:22px;}
+  .sparkle-2{bottom:10%; left:4%; width:14px;}
+  .hero-inner{
+    max-width:1080px; margin:0 auto;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem, 4.4vw, 3.5rem);
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    background:linear-gradient(100deg, #8A6A1B 0%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, #8A6A1B 100%);
+    background-size:220% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    color:var(--gold);
+    animation:shimmer 7s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%{background-position:0% center;}
+    50%{background-position:100% center;}
+    100%{background-position:0% center;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero h1 em{animation:none;}
+  }
+  .hero p.lede{
+    font-size:1.08rem;
+    color:#3E4C46;
+    max-width:48ch;
+    margin-bottom:22px;
+  }
+  .genre-tags{
+    display:flex; flex-wrap:wrap; gap:10px;
+    margin-bottom:32px;
+  }
+  .genre-tags span{
+    font-size:0.82rem;
+    font-weight:600;
+    padding:7px 14px;
+    border:1px solid var(--teal);
+    color:var(--teal-deep);
+    border-radius:999px;
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:2px;
+    font-weight:600;
+    font-size:0.92rem;
+    text-decoration:none;
+    transition:all 0.2s ease;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--teal); color:var(--paper);}
+  .btn-primary:hover{background:var(--teal-deep);}
+  .btn-ghost{border-color:var(--ink); color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink); color:var(--paper);}
+
+  /* signature mark: tanpura + treble-clef motif, echoing the academy's own logo */
+  .mandala-wrap{
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .mandala-wrap .logo-mark{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+  }
+  .mandala{
+    width:min(100%, 340px);
+    height:auto;
+    animation:spin 160s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){
+    .mandala{animation:none;}
+  }
+
+  /* ---------- section shell ---------- */
+  section{padding:84px 0;}
+  section .head{
+    max-width:640px;
+    margin-bottom:48px;
+  }
+  section .head h2{
+    font-size:clamp(1.8rem, 3vw, 2.4rem);
+    margin-top:10px;
+  }
+  section .head p{
+    margin-top:14px;
+    color:#3E4C46;
+    font-size:1rem;
+  }
+
+  .rule{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:0;
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:start;
+  }
+  .about-grid p{margin-bottom:16px; color:#31423C;}
+  .pillars{
+    display:flex; flex-direction:column; gap:0;
+  }
+  .pillar{
+    display:flex; gap:16px; align-items:flex-start;
+    padding:18px 0;
+    border-top:1px solid var(--line);
+  }
+  .pillar:first-child{border-top:none; padding-top:0;}
+  .pillar-mark{
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:600;
+    color:var(--gold);
+    font-size:1.1rem;
+    width:28px;
+    flex-shrink:0;
+  }
+  .pillar h3{
+    font-size:1.05rem;
+    color:var(--ink);
+    font-weight:600;
+    font-family:var(--body);
+    margin-bottom:4px;
+  }
+  .pillar p{color:#4C5C55; font-size:0.93rem;}
+
+  /* ---------- genres / offerings ---------- */
+  .sessions-band{background:var(--paper-2);}
+  .session-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .session-card{
+    background:var(--paper-2);
+    padding:32px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .session-form{
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-weight:600;
+    color:var(--gold);
+  }
+  .session-card h3{
+    font-size:1.35rem;
+    color:var(--teal-deep);
+    font-weight:600;
+  }
+  .session-desc{font-size:0.92rem; color:#3E4C46;}
+  .session-meta{
+    display:flex; flex-wrap:wrap; gap:8px 18px;
+    font-size:0.85rem;
+    color:#4C5C55;
+    padding-top:4px;
+  }
+  .session-fee{
+    margin-top:auto;
+    padding-top:14px;
+    border-top:1px dashed var(--line);
+    font-size:0.88rem;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .session-fee b{color:var(--teal); font-family:var(--display); font-size:1rem;}
+  .session-enquire{
+    font-size:0.82rem; font-weight:600; color:var(--gold);
+    text-decoration:none;
+  }
+  .session-enquire:hover{color:var(--teal);}
+
+  .format-strip{
+    margin-top:1px;
+    background:var(--teal-deep);
+    color:var(--paper);
+    padding:22px 32px;
+    display:flex; flex-wrap:wrap; gap:14px 34px;
+    align-items:center;
+    justify-content:center;
+    font-size:0.92rem;
+    font-weight:500;
+  }
+  .format-strip span{display:flex; align-items:center; gap:8px;}
+  .format-strip .dot{width:5px; height:5px; border-radius:50%; background:var(--gold-light);}
+  .format-strip .badge{
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:700;
+    padding:6px 16px;
+    border-radius:999px;
+    font-size:0.82rem;
+  }
+
+  @media (max-width:820px){
+    .session-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- what you'll build ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+  }
+  .skill{
+    padding:26px 20px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    text-align:left;
+  }
+  .skill h3{
+    font-size:1.02rem; font-family:var(--body); font-weight:600;
+    color:var(--teal-deep); margin-bottom:6px;
+  }
+  .skill p{font-size:0.86rem; color:#4C5C55;}
+  @media (max-width:820px){
+    .skills-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:520px){
+    .skills-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- specialised programs ---------- */
+  .programs-section{
+    background:linear-gradient(155deg, var(--ink) 0%, #143F3D 55%, var(--teal-deep) 100%);
+    color:#EAF0EC;
+    position:relative;
+    overflow:hidden;
+  }
+  .programs-section::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(201,162,39,0.10) 1px, transparent 0);
+    background-size:26px 26px;
+    pointer-events:none;
+  }
+  .programs-section .eyebrow{color:var(--gold-light);}
+  .programs-section .head h2{color:#F6EFDC;}
+  .programs-section .head p{color:#B9C9C3;}
+  .programs-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:22px;
+    position:relative;
+  }
+  .program-card{
+    background:rgba(251,249,243,0.05);
+    border:1px solid rgba(201,162,39,0.35);
+    border-radius:4px;
+    padding:28px 24px;
+    display:flex; flex-direction:column; gap:12px;
+    transition:border-color 0.25s ease, background 0.25s ease;
+  }
+  .program-card:hover{
+    border-color:var(--gold);
+    background:rgba(251,249,243,0.08);
+  }
+  .program-icon{
+    width:38px; height:38px;
+    color:var(--gold-light);
+  }
+  .program-card h3{
+    font-family:var(--display);
+    font-size:1.18rem;
+    font-weight:600;
+    color:#F6EFDC;
+  }
+  .program-card p{
+    font-size:0.9rem;
+    color:#B9C9C3;
+    line-height:1.55;
+  }
+  .program-tag{
+    font-size:0.66rem;
+    text-transform:uppercase;
+    letter-spacing:0.13em;
+    font-weight:600;
+    color:var(--gold-light);
+  }
+  @media (max-width:920px){
+    .programs-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .programs-grid{grid-template-columns:1fr;}
+  }
+  .enquire-wrap{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:56px;
+  }
+  .enquire-side h2{font-size:clamp(1.8rem,3vw,2.4rem);}
+  .enquire-side p{color:#3E4C46; margin-top:14px;}
+  .contact-lines{margin-top:30px; display:flex; flex-direction:column; gap:14px;}
+  .contact-lines a{text-decoration:none; font-weight:500;}
+  .contact-lines .label{
+    display:block;
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:2px;
+  }
+
+  form{display:flex; flex-direction:column; gap:18px;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  label{
+    display:block;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:7px;
+  }
+  input, select, textarea{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1.5px solid var(--line);
+    padding:10px 2px;
+    font-family:var(--body);
+    font-size:0.98rem;
+    color:var(--ink);
+    outline:none;
+    transition:border-color 0.2s ease;
+  }
+  input:focus, select:focus, textarea:focus{border-bottom-color:var(--teal);}
+  textarea{resize:vertical; min-height:90px;}
+  form button{
+    align-self:flex-start;
+    margin-top:8px;
+    background:var(--teal);
+    color:var(--paper);
+    border:none;
+    padding:14px 32px;
+    font-weight:600;
+    font-size:0.92rem;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background 0.2s ease;
+  }
+  form button:hover{background:var(--teal-deep);}
+  form button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--teal); outline-offset:2px;
+  }
+  .form-note{font-size:0.8rem; color:#6A7A73; margin-top:-6px;}
+  #form-status{font-size:0.88rem; margin-top:4px;}
+
+  @media (max-width:720px){
+    .field-row{grid-template-columns:1fr;}
+    .enquire-wrap{grid-template-columns:1fr;}
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--ink);
+    color:#CBD8D3;
+    padding:56px 0 28px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:28px;
+  }
+  footer h4{
+    font-family:var(--body);
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--gold-light);
+    font-weight:600;
+    margin-bottom:16px;
+  }
+  footer .brand-text{color:#F1ECDD;}
+  footer p{font-size:0.88rem; color:#AEC0B9; max-width:34ch;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:10px; font-size:0.9rem;}
+  footer a{text-decoration:none; color:#CBD8D3;}
+  footer a:hover{color:var(--gold-light);}
+  .legal-line{
+    font-size:0.76rem; color:#8CA098;
+    padding-top:18px; border-top:1px solid rgba(203,216,211,0.15);
+    margin-top:8px;
+  }
+  .footer-bottom{
+    border-top:1px solid rgba(203,216,211,0.18);
+    padding-top:18px;
+    margin-top:18px;
+    font-size:0.78rem;
+    color:#8CA098;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .mandala-wrap{order:-1; padding-bottom:12px;}
+    .mandala{width:220px;}
+    .about-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    nav.links.open{
+      display:flex; flex-direction:column;
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--paper); padding:20px 28px 28px;
+      border-bottom:1px solid var(--line);
+      gap:18px;
+    }
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body class="bg-weave">
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <img class="logo-mark nav-logo" src="logo.png" alt="Raaga Sudha logo">
+      <span class="brand-text">Raaga Sudha<span>Fine Arts Academy</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#genres">Genres</a>
+      <a href="#programs">Specialised Programs</a>
+      <a href="#enquire">Enquire</a>
+      <a href="#enquire" class="nav-cta">Book a trial class</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <svg class="sparkle sparkle-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#C9A227"/>
+    </svg>
+    <svg class="sparkle sparkle-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#0E7C86"/>
+    </svg>
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Vocal Music Academy &middot; Singapore</p>
+        <h1>Unearth Your <em>Inner Singer</em></h1>
+        <div class="hero-flourish">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 10 C40 10 40 2 70 2 C90 2 90 10 100 10 C110 10 110 2 130 2 C160 2 160 10 200 10" stroke="#C9A227" stroke-width="1" fill="none"/>
+            <circle cx="100" cy="10" r="2.5" fill="#C9A227"/>
+          </svg>
+        </div>
+        <p class="lede">Raaga Sudha Fine Arts Academy trains singers of every age and level — from first notes to performance-ready — across Hindustani, Carnatic, Bollywood and light music, with AI-powered custom sessions and specialised programs for every kind of learner.</p>
+        <div class="genre-tags">
+          <span>Hindustani</span>
+          <span>Carnatic</span>
+          <span>Bollywood</span>
+          <span>Light Music</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#enquire" class="btn btn-primary">Book a trial class</a>
+          <a href="#genres" class="btn btn-ghost">Explore genres</a>
+        </div>
+      </div>
+      <div class="mandala-wrap">
+        <svg class="mandala" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="200" cy="200" r="190" fill="none" stroke="#D9CFC0" stroke-width="1"/>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="#C9A227" stroke-width="1"/>
+          <circle cx="200" cy="200" r="110" fill="none" stroke="#0E7C86" stroke-width="1"/>
+          <g id="petals"></g>
+          <circle cx="200" cy="200" r="58" fill="#FBF9F3" stroke="#0E7C86" stroke-width="1.4"/>
+        </svg>
+        <img class="logo-mark" src="logo.png" alt="Raaga Sudha logo" style="position:absolute; width:26%; height:26%;">
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">About the academy</p>
+        <h2 style="margin-top:10px;">Trained voice, taught with care.</h2>
+        <p style="margin-top:22px;">Raaga Sudha brings professional singing classes tailored entirely to your lifestyle. Whether you're introducing your child to the joy of music, restarting a lifelong passion, or looking to polish your vocal skills — there's a spot for you.</p>
+        <p>Hindustani, Carnatic, and Bollywood, all under one roof, with total flexibility: online or in-person at Costa Rhu, individual or group, open to all ages and skill levels.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-mark">01</span>
+          <div><h3>Vocal warm-ups &amp; range expansion</h3><p>Build a stronger, more flexible voice from the ground up.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">02</span>
+          <div><h3>Pitch &amp; rhythm accuracy</h3><p>Ear training and taal work to sing in tune, in time.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">03</span>
+          <div><h3>Correct breathing &amp; posture</h3><p>Technique that protects the voice and powers performance.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">04</span>
+          <div><h3>Performance confidence</h3><p>From practice room to stage, sung with assurance.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GENRES ================= -->
+  <section id="genres" class="sessions-band">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What we teach</p>
+        <h2>Three paths, one voice</h2>
+        <p>Each path blends structured technique with the music you actually want to sing — choose one, or move between them as you grow.</p>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0;">
+      <div class="session-grid" id="sessionGrid"></div>
+    </div>
+    <div class="format-strip">
+      <span class="badge">Open to all age groups</span>
+      <span><span class="dot"></span>Online &amp; in-person classes</span>
+      <span><span class="dot"></span>Individual &amp; group sessions</span>
+    </div>
+  </section>
+
+  <!-- ================= SPECIALISED PROGRAMS ================= -->
+  <section id="programs" class="programs-section">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Beyond the standard class</p>
+        <h2>Specialised programs</h2>
+        <p>Training designed around who you are, not just what you want to sing.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card">
+          <svg class="program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M12 2 L13.8 8.2 L20 10 L13.8 11.8 L12 18 L10.2 11.8 L4 10 L10.2 8.2 Z"/>
+            <circle cx="19" cy="19" r="2.2"/>
+          </svg>
+          <p class="program-tag">AI-Enhanced Learning</p>
+          <h3>AI-powered custom sessions</h3>
+          <p>Practice plans, repertoire, and feedback shaped around each student's voice and pace, blending our teaching with AI-assisted tools.</p>
+        </div>
+        <div class="program-card">
+          <svg class="program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <circle cx="12" cy="7" r="3.4"/>
+            <path d="M5 20 C5 15.5 8 13 12 13 C16 13 19 15.5 19 20"/>
+          </svg>
+          <p class="program-tag">Inclusive Coaching</p>
+          <h3>Special needs coaching</h3>
+          <p>Patient, individualised coaching for children and adults with special needs, paced to each student's comfort and strengths.</p>
+        </div>
+        <div class="program-card">
+          <svg class="program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M12 3 C12 3 8 7 8 12 C8 16 10 19 12 21 C14 19 16 16 16 12 C16 7 12 3 12 3 Z"/>
+          </svg>
+          <p class="program-tag">For Our Seniors</p>
+          <h3>Devotional &amp; bhajan training</h3>
+          <p>Gentle, unhurried sessions for elderly students drawn to devotional music and bhajans — for joy, community, and calm.</p>
+        </div>
+        <div class="program-card">
+          <svg class="program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M4 6 L12 3 L20 6 L12 9 Z"/>
+            <path d="M7 8 V15 C7 16.5 9 18 12 18 C15 18 17 16.5 17 15 V8"/>
+          </svg>
+          <p class="program-tag">Structured Pathway</p>
+          <h3>Academic &amp; certification guidance</h3>
+          <p>An academic-based curriculum with structured guidance toward music certification exams and formal degree examinations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ENQUIRY ================= -->
+  <section id="enquire">
+    <div class="wrap enquire-wrap">
+      <div class="enquire-side">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Send an enquiry</h2>
+        <p>Tell us which genre interests you and we'll get back to you with the next available trial slot.</p>
+        <div class="contact-lines">
+          <div><span class="label">Email</span><a href="mailto:raaga.sudha.academy@gmail.com">raaga.sudha.academy@gmail.com</a></div>
+          <div><span class="label">WhatsApp &mdash; Anuradha</span><a href="https://wa.me/6590852640">+65 9085 2640</a></div>
+          <div><span class="label">Location</span><span>Online, or in-person at Costa Rhu, Singapore</span></div>
+        </div>
+
+      </div>
+      <div>
+        <form id="enquiryForm">
+          <div class="field-row">
+            <div>
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+              <label for="interest">Interested in</label>
+              <select id="interest" name="interest">
+                <option>Hindustani Classical</option>
+                <option>Carnatic Classical</option>
+                <option>Bollywood &amp; Light Music</option>
+                <option>AI-Powered Custom Sessions</option>
+                <option>Special Needs Coaching</option>
+                <option>Devotional &amp; Bhajan Training</option>
+                <option>Certification / Degree Guidance</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Student's age, prior experience, preferred timing..."></textarea>
+          </div>
+          <button type="submit">Send enquiry</button>
+          <p id="form-status" class="form-note"></p>
+          <p class="form-note">We'll get back to you within 1–2 business days.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:2px;">
+          <img class="logo-mark footer-logo" src="logo.png" alt="Raaga Sudha logo">
+          <p class="brand-text" style="font-family:var(--display); font-size:1.2rem;">Raaga Sudha</p>
+        </div>
+        <p style="margin-top:10px;">Fine Arts Academy &middot; Hindustani, Carnatic, Bollywood &amp; light music vocal training in Singapore.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#genres">Genres</a></li>
+          <li><a href="#programs">Specialised Programs</a></li>
+          <li><a href="#enquire">Enquire</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:raaga.sudha.academy@gmail.com">raaga.sudha.academy@gmail.com</a></li>
+          <li><a href="https://wa.me/6590852640">+65 9085 2640</a></li>
+          <li>Costa Rhu, Singapore</li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal-line">Raaga Sudha Fine Arts Academy Pte. Ltd. &middot; UEN 202611850E &middot; Registered office: 1 Scotts Road, #24-10, Shaw Centre, Singapore 228208</p>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Raaga Sudha Fine Arts Academy Pte. Ltd.</span>
+      <span>Unearth Your Inner Singer</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Class content — genres offered */
+const SESSIONS = [
+  {
+    form: "Hindustani",
+    title: "Hindustani Classical",
+    meta: "Individual &amp; group &middot; Online &amp; in-person",
+    desc: "Master raags, taals, and voice culture, building up to the art of aalap and taan through a variety of bandishes.",
+    fee: "Contact for fees"
+  },
+  {
+    form: "Carnatic",
+    title: "Carnatic Classical",
+    meta: "Individual &amp; group &middot; Online &amp; in-person",
+    desc: "Everything from basic exercises to complex kritis and creative improvisation.",
+    fee: "Contact for fees"
+  },
+  {
+    form: "Bollywood & Light Music",
+    title: "Bollywood & Light Music",
+    meta: "Individual &amp; group &middot; Online &amp; in-person",
+    desc: "Sing your favourite tracks with the right emotion, pitch perfection, breath control, and microphone technique.",
+    fee: "Contact for fees"
+  }
+];
+
+const FORM_ENDPOINT = "mailto:raaga.sudha.academy@gmail.com";
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const grid = document.getElementById('sessionGrid');
+SESSIONS.forEach(s => {
+  const card = document.createElement('div');
+  card.className = 'session-card';
+  card.innerHTML = `
+    <div>
+      <p class="session-form">${s.form}</p>
+      <h3>${s.title}</h3>
+    </div>
+    <p class="session-desc">${s.desc}</p>
+    <p class="session-meta">${s.meta}</p>
+    <div class="session-fee">
+      <b>${s.fee}</b>
+      <a class="session-enquire" href="#enquire">Enquire &rarr;</a>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+
+// decorative ring — 12 positions echoing a raga-wheel motif
+const petalGroup = document.getElementById('petals');
+for(let i=0;i<12;i++){
+  const angle = (i / 12) * 2 * Math.PI;
+  const r1 = 110, r2 = 150;
+  const x1 = 200 + r1 * Math.cos(angle);
+  const y1 = 200 + r1 * Math.sin(angle);
+  const x2 = 200 + r2 * Math.cos(angle);
+  const y2 = 200 + r2 * Math.sin(angle);
+  const line = document.createElementNS("http://www.w3.org/2000/svg","line");
+  line.setAttribute("x1",x1); line.setAttribute("y1",y1);
+  line.setAttribute("x2",x2); line.setAttribute("y2",y2);
+  line.setAttribute("stroke", i % 3 === 0 ? "#0E7C86" : "#D9CFC0");
+  line.setAttribute("stroke-width","1");
+  petalGroup.appendChild(line);
+
+  const dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
+  dot.setAttribute("cx", 200 + 170 * Math.cos(angle));
+  dot.setAttribute("cy", 200 + 170 * Math.sin(angle));
+  dot.setAttribute("r", 3);
+  dot.setAttribute("fill", "#C9A227");
+  petalGroup.appendChild(dot);
+}
+
+// mobile nav toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', false);
+}));
+
+// enquiry form handling
+const form = document.getElementById('enquiryForm');
+const status = document.getElementById('form-status');
+form.addEventListener('submit', (e) => {
+  if(FORM_ENDPOINT.startsWith('mailto:')){
+    e.preventDefault();
+    const data = new FormData(form);
+    const body = `Name: ${data.get('name')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')}\nInterested in: ${data.get('interest')}\nMessage: ${data.get('message')}`;
+    const mailto = `${FORM_ENDPOINT}?subject=${encodeURIComponent('Enquiry: ' + data.get('interest'))}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    status.textContent = "Opening your email app...";
+  } else {
+    e.preventDefault();
+    status.textContent = "Sending...";
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(r => {
+      if(r.ok){ status.textContent = "Thank you — we'll be in touch soon."; form.reset(); }
+      else { status.textContent = "Something went wrong. Please email us directly."; }
+    }).catch(() => { status.textContent = "Something went wrong. Please email us directly."; });
+  }
+});
+</script>
+
+</body>
+</html>
